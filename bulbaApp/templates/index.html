@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulba</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+{# Load the tag library #}
+{% load django_bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block bootstrap5_content %}
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'img/bulbaLogo.png' %}" width="45" alt="" class="d-inline-block align-middle mr-2"/>
+
+              <!-- Logo Text -->
+      <span class="text-uppercase font-weight-bolder">Bulba</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Donation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Price Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Liquidity Locked</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Twitter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Buy/Trade</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Etherscan</a></li>
+                  <li><a class="dropdown-item" href="#">DEXTools.io</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">@BulbaRazorLeaf</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-success" type="submit">Buy Bulba</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+      
+<div class="parallax1 background-tint">
+    <h1 class="landing">Nature begins with You</h1>
+</div>
+
+<div id='open'>
+  <h1 class='landing'>Our Mission</h1>
+</div>
+
+<div class="parallax2 background-tint">
+    <h1>How to Buy Bulba</h1>
+    
+</div>
+
+<div class="parallax3 background-tint">
+    <h1>Like and subscribe!</h1>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
