@@ -1,95 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulba</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/script.js' %}"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulba</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
 </head>
+
 <body>
-{# Load the tag library #}
-{% load django_bootstrap5 %}
+  {# Load the tag library #}
+  {% load django_bootstrap5 %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
+  {# Load CSS and JavaScript #}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
 
-{% block bootstrap5_content %}
+  {% block bootstrap5_content %}
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="{% static 'img/bulbaLogo.png' %}" width="45" alt="" class="d-inline-block align-middle mr-2"/>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="60" alt="" class="d-inline-block align-middle mb-3"/>
 
-              <!-- Logo Text -->
-      <span class="text-uppercase font-weight-bolder">Bulba</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <!-- Logo Text -->
+        <h2 class="headerBulba text-uppercase mt-3">Bulba</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mb-3" id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Donation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Price Chart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://unicrypt.network/amm/uni/pair/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Liquidity Locked</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://twitter.com/BulbaRazorLeaf">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://app.uniswap.org/#/swap?outputCurrency=0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755">Buy/Trade</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Etherscan</a></li>
+              <li><a class="dropdown-item" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">DEXTools.io</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Donation</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Price Chart</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Liquidity Locked</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Twitter</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Buy/Trade</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Etherscan</a></li>
-                  <li><a class="dropdown-item" href="#">DEXTools.io</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">@BulbaRazorLeaf</a></li>
-                </ul>
-              </li>
+              <li><a href="mailto:bulbarazorleaf@yahoo.com" target="_blank">Email Us!</a></li>
+              <li><a class="dropdown-item" target="_blank" href="https://twitter.com/BulbaRazorLeaf">@BulbaRazorLeaf</a></li>
             </ul>
-            <form class="d-flex">
-              <button class="btn btn-outline-success" type="submit">Buy Bulba</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+          </li>
+        </ul>
+        <form class="d-flex" target="_blank" action="https://app.uniswap.org/#/swap?outputCurrency=0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755">
+          <button class="btn btn-outline-success" type="submit">Buy Bulba</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
+  <div class="landing parallaxLanding background-tint">
+    <h1>Nature begins withYou</h1>
+  </div>
 
-      
-<div class="parallax1 background-tint">
-    <h1 class="landing">Nature begins with You</h1>
-</div>
+  <div class='text-uppercase background-tint-water' id='open'>
+    <h1>Our Mission</h1>
+  </div>
 
-<div id='open'>
-  <h1 class='landing'>Our Mission</h1>
-</div>
+  <div class="parallax1 background-tint">
+    <h1>The Amazon provides oxygen for the planet, houses millions of different species,
+      regulates massive planetary systems. Our goal is to help preserve the Amazon rainforest.
+      With your help in this community, you are helping us take a step in the right direction.
+    </h1>
+  </div>
 
-<div class="parallax2 background-tint">
-    <h1>How to Buy Bulba</h1>
-    
-</div>
+  <div class='text-uppercase background-tint-water' id='open'>
+    <h1>2021 Roadmap</h1>
+  </div>
+  <div class="container-fluid m-0 p-0">
 
-<div class="parallax3 background-tint">
-    <h1>Like and subscribe!</h1>
-</div>
+    <div class="row parallax3 background-tint m-0 pt-5">
+      <div class="col-1 bg-transparent">
+      </div>
+      <div class="col-4 m-5" id="roadmap">
+        <ul>
+          <li>Q2</li>
+          <li>New Website & Design</li>
+          <li>Coin Safety Audit</li>
+          <li>Marketing Campaign</li>
+          <li>Blockfolio Listing</li>
+          <li>Coinmarketcap Listing</li>
+          <li>Coingecko Listing</li>
+          <li>Community AMAs</li>
+        </ul>
+      </div>
+      <div class="col bg-transparent">
+      </div>
+    </div>
 
-{% endblock %}
+    <div class="row parallax3 background-tint h-50 m-0">
+      <div class="col-6 bg-transparent">
+      </div>
+      <div class="col-4 m-5" id="roadmap">
+        <ul>
+          <li>Q3</li>
+          <li>Giveaways</li>
+          <li>Charity Partnerships</li>
+          <li>Energy Saving Platform</li>
+          <li>Whitebit Listing</li>
+          <li>NFTs</li>
+          <li>SQRT Merch</li>
+          <li>SQRT Game</li>
+          <li>Influencer Marketing</li>
+        </ul>
+      </div>
+      <div class="col bg-transparent">
+      </div>
+    </div>
+
+    <div class="row parallax3 background-tint h-50 m-0 pb-5">
+      <div class="col-2 bg-transparent">
+      </div>
+      <div class="col-4 m-5" id="roadmap">
+        <ul>
+          <li>Q4</li>
+          <li>More Exchange Listings</li>
+          <li>Large Scale Charity Donations</li>
+          <li>Crowdfunding System</li>
+          <li>Heavy Marketing Campaign</li>
+          <li>Sponser A Turtle Platform</li>
+          <li>Small Surprise ;)</li>
+        </ul>
+      </div>
+      <div class="col bg-transparent">
+      </div>
+    </div>
+
+  </div>
+
+  <div class='text-uppercase background-tint-water' id='open'>
+    <h1>How To Buy Bulba</h1>
+  </div>
+
+  <div class="parallax2 background-tint h-100 m-0 py-5" id="howBuy">
+    <ul>
+      <li>Log on to <span><a target="_blank" href="http://app.uniswap.org">http://app.uniswap.org</a></span></li>
+      <li>Connect your Metamask/Coinbase/Trust etc.. Wallet</li>
+      <li>Use the Contract</li>
+      <li>Address: 0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755</li>
+      <li>Swap ETH for $BULBA, set up Slippage at 5%</li>
+      <li>Add the contract address as a new token on metamask</li>
+      <li class="pt-3" style="list-style: none;">YOU ARE NOW A $BULBA HOLDER!</li>
+    </ul>
+  </div>
+
+  <div class="container-fluid m-0 py-3 px-5" id='footer'>
+    <div class="row" id='moreLinks'>
+      <div class="col-4">
+        <ul>
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>Q2</li>
+          <li>Community AMAs</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+        </ul>
+      </div>
+    </div>
+  
+  </div>
+
+  {% endblock %}
 
 </body>
+
 </html>

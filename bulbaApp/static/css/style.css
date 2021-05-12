@@ -2,8 +2,24 @@
 @import url('https://fonts.googleapis.com/css?family=Meie+Script|Shadows+Into+Light|Arvo|Monda');
 
 .background-tint {
-  background-color: rgba(126, 57, 0, 0.479);
+  background-color: rgba(70, 34, 9, 0.692);
   background-blend-mode: multiply;
+}
+
+.background-tint-water {
+  background-color: rgba(0, 63, 156, 0.959);
+  background-blend-mode: multiply;
+}
+
+.parallaxLanding {
+  background-image: url("/static/img/amazonLanding-min.jpg");
+  height: 100vh; 
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
 }
 
 .parallax1 {
@@ -39,34 +55,122 @@
     display: table;
   }
 
-  .landing {
-    font-size: 75px;
+  .landing h1{
+    font-size: 100px;
     font-weight: 100;
+    font-family: 'Meie Script', cursive;
   }
 
-  h1 {
-      font-family: 'Meie Script', cursive;
-      font-size: x-large;
+  .headerBulba {
+    display: inline-block;
+    font-size: 40px;
+  }
+
+  h1, ul {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       color: rgb(164, 221, 141);
       margin: 0px;
-      text-align: center;
+      text-align: center !important;
       display: table-cell;
       vertical-align: middle;
   }
 
   a {
-      font-size:small;
+      font-size:18px;
   }
 
   div#open {
-    background-color:rgb(89, 88, 74);
+    background-image:url("/static/img/water-min.jpg");
     height: 150px;
     width: 100%;
     display: table;
-    font-size: 100px;
-    font-weight: 100;
-    border-top:20px solid #C2762B;
-    border-right:20px solid #AAC32B;
-    border-bottom:20px solid #C2C2C2;
-    border-left:20px solid #3D3D3D;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
+  div#open h1 {
+    font-size: 75px;
+    font-weight: 100;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  div#roadmap {
+    background-image:url("/static/img/treeTexture-min.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 87, 26, 0.842);
+    background-blend-mode: multiply;
+    display: table;
+    padding-bottom: 40px;
+  }
+
+  div#howBuy {
+    display: table;
+    padding-left: 30px;
+  }
+
+  div#roadmap ul, div#footer ul{
+    list-style: none;
+    padding: 0px;
+  }
+
+  div#howBuy ul {
+    list-style: disc;
+  }
+
+  div#roadmap li{
+    color: rgb(164, 221, 141);
+    text-align: left;
+    font-size: 24px;
+  }
+
+  div#howBuy li{
+    text-align: left;
+    font-size: 32px;
+  }
+
+  div#howBuy li span a {
+    font-size: 32px;
+    text-decoration: inherit;
+    color: inherit;
+  }
+
+  div#roadmap li:nth-child(1){
+    color: rgb(164, 221, 141);
+    text-align: center;
+    font-size: 40px;
+    font-weight:100;
+  }
+
+  div#footer {
+    /*
+    background-image:url("/static/img/footStones-min.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+    */
+    background-color:rgb(89, 88, 74);
+    width: 100%;
+    display: table;
+    text-align: center;
+  }
+
+  div#footer ul{
+    
+    width: 100%;
+    display: table;
+  }
+
+  div#moreLinks ul {
+    text-align: center;
+  }
+
+
+
