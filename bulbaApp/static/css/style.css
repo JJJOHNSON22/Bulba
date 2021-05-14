@@ -6,11 +6,6 @@
   background-blend-mode: multiply;
 }
 
-.background-tint-water {
-  background-color: rgba(0, 63, 156, 0.959);
-  background-blend-mode: multiply;
-}
-
 .parallaxLanding {
   background-image: url("/static/img/amazonLanding-min.jpg");
   height: 100vh; 
@@ -20,6 +15,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: table;
+}
+
+div#mission {
+  background-color: rgb(164, 221, 141);
+}
+
+div#mission h1 {
+  color: white !important;
 }
 
 .parallax1 {
@@ -170,6 +173,10 @@
 
   div#moreLinks ul {
     text-align: center;
+  }
+
+  .container-fluid {
+    height: 100%;
   }
 
 
