@@ -22,12 +22,11 @@
   {% block bootstrap5_content %}
 
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+  <nav id="navbar" class="navbar navbar-expand navbar-dark bg-dark py-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="60" alt="" class="d-inline-block align-middle mb-3"/>
 
-        <!-- Logo Text -->
         <h2 class="headerBulba text-uppercase mt-3">Bulba</h2>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -65,7 +64,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a href="mailto:bulbarazorleaf@yahoo.com" target="_blank">Email Us!</a></li>
+              <li><a class="dropdown-item" href="mailto:bulbarazorleaf@yahoo.com" target="_blank">Email Us!</a></li>
               <li><a class="dropdown-item" target="_blank" href="https://twitter.com/BulbaRazorLeaf">@BulbaRazorLeaf</a></li>
             </ul>
           </li>
@@ -77,15 +76,16 @@
     </div>
   </nav>
 
-  <div class="landing parallaxLanding background-tint">
-    <h1>Nature begins withYou</h1>
-  </div>
+  <section>
+    <h2 id="text">Nature begins with you</h2>
+    <img class id="heroTop" src="{% static 'img/hero/heroTop.png' %}"/>
+    <img id="heroLeft" src="{% static 'img/hero/heroLeft.png' %}"/>
+    <img id="heroRight" src="{% static 'img/hero/heroRight.png' %}"/>
+    <img id="heroMid" src="{% static 'img/hero/heroMid.png' %}"/>
+    <img id="heroBot" src="{% static 'img/hero/heroBot.png' %}"/>
+</section>
 
-  <div class='text-uppercase background-tint-water' id='open'>
-    <h1>Our Mission</h1>
-  </div>
-
-  <div class="parallax1 background-tint">
+  <div id="mission" class="m-5 p-4">
     <h1>The Amazon provides oxygen for the planet, houses millions of different species,
       regulates massive planetary systems. Our goal is to help preserve the Amazon rainforest.
       With your help in this community, you are helping us take a step in the right direction.
@@ -176,27 +176,49 @@
     <div class="row" id='moreLinks'>
       <div class="col-4">
         <ul>
-          <li>one</li>
-          <li>two</li>
-          <li>three</li>
+          <li class="nav-item"><a class="nav-link" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Donation</a></li>
+          <li><a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Price Chart</a></li>
+          <li><a class="nav-link" target="_blank" href="https://unicrypt.network/amm/uni/pair/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Liquidity Locked</a></li>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <li>Q2</li>
-          <li>Community AMAs</li>
+          <li><a class="navbar-brand footBar" href="/">
+            <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="80" alt="" class="d-inline-block mr-0"/>
+          </a></li>
+          <li><a id="logoText" class="nav-link" target="_blank" href="https://twitter.com/BulbaRazorLeaf">Twitter</a></li>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <li>one</li>
-          <li>two</li>
-          <li>three</li>
+          <li><a class="nav-link" target="_blank" href="https://app.uniswap.org/#/swap?outputCurrency=0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755">Buy/Trade</a></li>
+          <li><a class="nav-link" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Etherscan</a></li>
+          <li><a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">DEXTools.io</a></li>
         </ul>
       </div>
     </div>
   
   </div>
+  <script type="text/javascript">
+    let heroTop = document.getElementById("heroTop");
+    let heroLeft = document.getElementById("heroLeft");
+    let heroRight = document.getElementById("heroRight");
+    let heroMid = document.getElementById("heroMid");
+    let heroBot = document.getElementById("heroBot");
+    let text = document.getElementById("text");
+
+    window.addEventListener('scroll', function(){
+        var value = window.scrollY;
+
+        navbar.style.top = value * 0.8 + 'px';
+        heroTop.style.top = value * 0.8 + 'px';
+        heroLeft.style.top = value * 0.8 + 'px';
+        heroRight.style.top = value * 0.6 + 'px';
+        heroMid.style.top = value * 0.6 + 'px';
+        heroBot.style.top = value * 0.2 + 'px';
+        text.style.top = value * 1.2 + 'px';
+    })
+</script>
 
   {% endblock %}
 
