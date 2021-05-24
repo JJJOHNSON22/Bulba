@@ -22,22 +22,21 @@
   {% block bootstrap5_content %}
 
 
-  <nav id="navbar" class="navbar navbar-expand navbar-dark bg-dark py-0">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-inverse bg-dark py-0">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="60" alt="" class="d-inline-block align-middle mb-3"/>
-
-        <h2 class="headerBulba text-uppercase mt-3">Bulba</h2>
+      <a class="navbar-brand headerBulba text-uppercase" href="#">
+        <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="40" alt="" class="d-inline-block align-text-top py-1"/>
+        Bulba
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse mb-3" id="navbarSupportedContent" >
-        <ul class="navbar-nav me-auto mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
+
+      <button class="btn navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" hidden>
+         <span class="navbar-toggler-icon"></span>  
+       </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Donation</a>
           </li>
@@ -69,9 +68,7 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex" target="_blank" action="https://app.uniswap.org/#/swap?outputCurrency=0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755">
-          <button class="btn btn-outline-success" type="submit">Buy Bulba</button>
-        </form>
+
       </div>
     </div>
   </nav>
@@ -85,9 +82,9 @@
     <img id="heroBot" src="{% static 'img/hero/heroBot.png' %}"/>
 </section>
 
-  <div id="mission" class="m-5 p-4">
+  <div id="mission" class="m-2 p-2">
     <h1>The Amazon provides oxygen for the planet, houses millions of different species,
-      regulates massive planetary systems. Our goal is to help preserve the Amazon rainforest.
+      and regulates massive planetary systems. Our goal is to help preserve the Amazon rainforest.
       With your help in this community, you are helping us take a step in the right direction.
     </h1>
   </div>
@@ -97,7 +94,7 @@
   </div>
   <div class="container-fluid m-0 p-0">
 
-    <div class="row parallax3 background-tint m-0 pt-5">
+    <div class="row parallax3 background-tint h-50 m-0 pt-5">
       <div class="col-1 bg-transparent">
       </div>
       <div class="col-4 m-5" id="roadmap">
@@ -112,7 +109,7 @@
           <li>Community AMAs</li>
         </ul>
       </div>
-      <div class="col bg-transparent">
+      <div class="col-1 bg-transparent">
       </div>
     </div>
 
@@ -160,31 +157,32 @@
     <h1>How To Buy Bulba</h1>
   </div>
 
-  <div class="parallax2 background-tint h-100 m-0 py-5" id="howBuy">
+  <div id="howToBuy" class="d-flex flex-column parallax2 background-tint h-50 m-0 py-5">
     <ul>
-      <li>Log on to <span><a target="_blank" href="http://app.uniswap.org">http://app.uniswap.org</a></span></li>
-      <li>Connect your Metamask/Coinbase/Trust etc.. Wallet</li>
-      <li>Use the Contract</li>
-      <li>Address: 0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755</li>
-      <li>Swap ETH for $BULBA, set up Slippage at 5%</li>
-      <li>Add the contract address as a new token on metamask</li>
-      <li class="pt-3" style="list-style: none;">YOU ARE NOW A $BULBA HOLDER!</li>
+    <div class="p-2"><li>Log on to <span><a target="_blank" href="http://app.uniswap.org">http://app.uniswap.org</a></span></li></div>
+    <div class="p-2"><li>Connect your Metamask/Coinbase/Trust etc.. Wallet</li></div>
+    <div class="p-2"><li>Use the Contract</li></div>
+    <div class="p-2"><li>Address: 0x8d286d2dc6bb2fb6600ea
+      08bbec4b0ca9f575755</li></div>
+    <div class="p-2"><li>Swap ETH for $BULBA, set up Slippage at 5%</li></div>
+    <div class="p-2"><li>Add the contract address as a new token on metamask</li></div>
+    <div class="p-2"><li class="pt-3" style="list-style: none;">YOU ARE NOW A $BULBA HOLDER!</li></div>
     </ul>
   </div>
 
-  <div class="container-fluid m-0 py-3 px-5" id='footer'>
-    <div class="row" id='moreLinks'>
+  <div class="container-fluid m-0 py-3 px-0" id='footer'>
+    <div class="row m-0">
       <div class="col-4">
         <ul>
           <li class="nav-item"><a class="nav-link" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Donation</a></li>
-          <li><a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Price Chart</a></li>
+          <li><a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">DEXTools.io</a></li>
           <li><a class="nav-link" target="_blank" href="https://unicrypt.network/amm/uni/pair/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Liquidity Locked</a></li>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <li><a class="navbar-brand footBar" href="/">
-            <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="80" alt="" class="d-inline-block mr-0"/>
+            <img src="{% static 'img/rsz_bulbaLogo.png' %}" width="70" alt="" class="d-inline-block mr-0"/>
           </a></li>
           <li><a id="logoText" class="nav-link" target="_blank" href="https://twitter.com/BulbaRazorLeaf">Twitter</a></li>
         </ul>
@@ -193,11 +191,11 @@
         <ul>
           <li><a class="nav-link" target="_blank" href="https://app.uniswap.org/#/swap?outputCurrency=0x8d286d2dc6bb2fb6600ea08bbec4b0ca9f575755">Buy/Trade</a></li>
           <li><a class="nav-link" target="_blank" href="https://etherscan.io/address/0xEB5376A0a372b0586C07A209569971392D6ac838">Etherscan</a></li>
-          <li><a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">DEXTools.io</a></li>
+          <li><a class="nav-link" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0x61475effe0e1d9d1a8046c3047f1b2085c43901d">Price Chart</a></li>
         </ul>
       </div>
+      </div>
     </div>
-  
   </div>
   <script type="text/javascript">
     let heroTop = document.getElementById("heroTop");
